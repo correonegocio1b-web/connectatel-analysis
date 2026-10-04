@@ -45,11 +45,21 @@ Requisitos: Python 3.9+, `pandas`, `numpy`, `matplotlib`, `seaborn`, `jupyter`.
 
 ```bash
 pip install pandas numpy matplotlib seaborn jupyter
-jupyter notebook "S7 Version-Estudiante-Project-ConnectaTel.ipynb"
+jupyter notebook connectatel-analysis.ipynb
 ```
 
 También se puede abrir directamente en **Google Colab** con `File → Open notebook → GitHub`.
 
+Los datasets (`plans.csv`, `users_latam.csv`, `usage.csv`) fueron provistos por la plataforma de TripleTen y no se redistribuyen en este repositorio; el notebook los lee desde `/datasets/`. Todas las salidas y gráficas ya están renderizadas en el notebook, así que puede revisarse sin ejecutarlo.
+
+## Contenido del repositorio
+
+- `connectatel-analysis.ipynb` — notebook completo con código, salidas, gráficas y resumen ejecutivo.
+
 ## Herramientas
 
 Jupyter Notebook · Python · pandas · numpy · seaborn · matplotlib
+
+---
+
+*Proyecto del programa de Data Analytics de TripleTen. Revisado y aprobado.*
