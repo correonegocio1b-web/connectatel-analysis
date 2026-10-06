@@ -1,0 +1,12 @@
+node_modules/
+.env
+
+# Salidas de Hardhat
+artifacts/
+cache/
+coverage/
+types/
+dist/
+
+# Despliegues en la red local de Hardhat (efímeros)
+ignition/deployments/chain-31337/
