@@ -3,15 +3,15 @@ import { network } from "hardhat";
 
 const { ethers, networkHelpers } = await network.create();
 
-const NAME = "Ping Doge";
-const SYMBOL = "PING";
+const NAME = "Trakash";
+const SYMBOL = "TRAKASH";
 const SUPPLY = 1_000_000_000n;
 const SUPPLY_WEI = ethers.parseUnits(SUPPLY.toString(), 18);
 
-describe("MemeCoin", function () {
+describe("Trakash", function () {
   async function deployFixture() {
     const [deployer, alice, bob] = await ethers.getSigners();
-    const token = await ethers.deployContract("MemeCoin", [
+    const token = await ethers.deployContract("Trakash", [
       NAME,
       SYMBOL,
       SUPPLY,
@@ -38,14 +38,14 @@ describe("MemeCoin", function () {
 
     it("puede enviar el suministro a otra dirección (p. ej. una multisig)", async function () {
       const [, alice] = await ethers.getSigners();
-      const token = await ethers.deployContract("MemeCoin", [NAME, SYMBOL, SUPPLY, alice.address]);
+      const token = await ethers.deployContract("Trakash", [NAME, SYMBOL, SUPPLY, alice.address]);
 
       expect(await token.balanceOf(alice.address)).to.equal(SUPPLY_WEI);
     });
 
     it("revierte si el suministro es cero", async function () {
       const [deployer] = await ethers.getSigners();
-      const factory = await ethers.getContractFactory("MemeCoin");
+      const factory = await ethers.getContractFactory("Trakash");
 
       await expect(
         factory.deploy(NAME, SYMBOL, 0n, deployer.address),
@@ -53,7 +53,7 @@ describe("MemeCoin", function () {
     });
 
     it("revierte si el destinatario es la dirección cero", async function () {
-      const factory = await ethers.getContractFactory("MemeCoin");
+      const factory = await ethers.getContractFactory("Trakash");
 
       await expect(factory.deploy(NAME, SYMBOL, SUPPLY, ethers.ZeroAddress))
         .to.be.revertedWithCustomError(factory, "ERC20InvalidReceiver")

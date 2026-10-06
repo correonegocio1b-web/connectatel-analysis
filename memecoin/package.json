@@ -1,20 +1,20 @@
 {
-  "name": "memecoin",
+  "name": "trakash",
   "version": "1.0.0",
   "private": true,
-  "description": "Memecoin ERC-20 de suministro fijo (Hardhat 3 + OpenZeppelin)",
+  "description": "Trakash ($TRAKASH): memecoin ERC-20 de suministro fijo (Hardhat 3 + OpenZeppelin)",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "hardhat build",
     "test": "hardhat test",
-    "deploy:local": "hardhat ignition deploy ignition/modules/MemeCoin.ts",
-    "deploy:base-sepolia": "hardhat ignition deploy ignition/modules/MemeCoin.ts --network baseSepolia",
-    "deploy:sepolia": "hardhat ignition deploy ignition/modules/MemeCoin.ts --network sepolia",
-    "deploy:bsc-testnet": "hardhat ignition deploy ignition/modules/MemeCoin.ts --network bscTestnet",
-    "deploy:base": "hardhat ignition deploy ignition/modules/MemeCoin.ts --network base",
-    "deploy:mainnet": "hardhat ignition deploy ignition/modules/MemeCoin.ts --network mainnet",
-    "deploy:bsc": "hardhat ignition deploy ignition/modules/MemeCoin.ts --network bsc"
+    "deploy:local": "hardhat ignition deploy ignition/modules/Trakash.ts",
+    "deploy:base-sepolia": "hardhat ignition deploy ignition/modules/Trakash.ts --network baseSepolia",
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/Trakash.ts --network sepolia",
+    "deploy:bsc-testnet": "hardhat ignition deploy ignition/modules/Trakash.ts --network bscTestnet",
+    "deploy:base": "hardhat ignition deploy ignition/modules/Trakash.ts --network base",
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/Trakash.ts --network mainnet",
+    "deploy:bsc": "hardhat ignition deploy ignition/modules/Trakash.ts --network bsc"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.6.1"

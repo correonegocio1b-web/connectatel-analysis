@@ -6,8 +6,8 @@ import {ERC20Burnable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
 /**
- * @title MemeCoin
- * @notice Token ERC-20 de suministro fijo para una memecoin.
+ * @title Trakash ($TRAKASH)
+ * @notice Memecoin ERC-20 de suministro fijo.
  *
  * Diseño deliberadamente simple y transparente:
  *  - Todo el suministro se acuña una sola vez, en el constructor.
@@ -16,13 +16,13 @@ import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20P
  *  - Cualquier holder puede quemar sus propios tokens (ERC20Burnable).
  *  - Admite aprobaciones firmadas sin gas (ERC20Permit / EIP-2612).
  */
-contract MemeCoin is ERC20, ERC20Burnable, ERC20Permit {
+contract Trakash is ERC20, ERC20Burnable, ERC20Permit {
     /// @dev El suministro inicial no puede ser cero.
     error ZeroSupply();
 
     /**
-     * @param name_ Nombre del token (p. ej. "Ping Doge").
-     * @param symbol_ Ticker del token (p. ej. "PING").
+     * @param name_ Nombre del token (p. ej. "Trakash").
+     * @param symbol_ Ticker del token (p. ej. "TRAKASH").
      * @param initialSupply Suministro total en tokens enteros, sin decimales.
      * @param recipient Dirección que recibe todo el suministro inicial.
      */
